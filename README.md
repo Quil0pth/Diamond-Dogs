@@ -1,1 +1,3 @@
-# Diamond-Dogs
+# Diamond Dogs
+
+## Art Garage
