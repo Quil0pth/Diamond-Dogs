@@ -15,10 +15,13 @@
 
 body {
   margin: 0;
+  padding: 2vh;
   display: flex;
-  place-items: center;
   min-width: 100vw;
   min-height: 100vh;
+
+  background-color: #0b0500;
+  color: #9649cb;
 }
 
 h1 {

@@ -7,8 +7,8 @@ function App() {
 
   return (
     <>
-      <div className='main-head text-8xl text-zinc-800'>
-        Diamond Dogs' Redemption
+      <div className='main-head text-8xl'>
+        _Diamond Dogs' Redemption_
       </div>
       <Items />
     </>

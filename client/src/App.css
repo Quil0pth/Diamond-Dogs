@@ -1,18 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Jacquard+12&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jacquard+24+Charted&display=swap");
 
 #root {
   min-width: 100%;
   min-height: 100%;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 .main-head {
-  font-family: "Jacquard 12", serif;
-  color: darkcyan;
+  font-family: "Jacquard 24 Charted", system-ui;
+  text-align: center;
+  color: #ff3366;
   font-size: 10vh;
-  margin: 0;
-  padding-left: 2vh;
+  margin-bottom: 2vh !important;
   font-weight: 100;
+  outline: #ff3366 solid 0.1vh;
+}
+
+.item-box {
+  font-family: "Jersey 15", sans-serif;
+  outline: #9649cb solid 0.1vh;
+  padding: 2vh;
 }

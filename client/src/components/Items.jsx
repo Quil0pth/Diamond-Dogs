@@ -1,42 +1,48 @@
-import { Component } from 'react';
+import { useState, useEffect } from 'react';
 
-class Items extends Component{
-    
-    constructor(props){
-        super(props);
-        this.state = {
-            items: []
+function Items() {
+
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        const link = "http://localhost:5000/";
+
+        const fetchItems = async () => {
+            try{
+                const response = await fetch(link + 'api/items');
+                const json = await response.json();
+                console.log(json);
+                setItems(json);
+            } catch (error) {
+                console.log("Error", error);
+            }
         }
-    }
+        fetchItems();
+    }, []);
 
-    componentDidMount(){
-        fetch('api/items')
-        .then(res => {res.json()
-            console.log(res)
-        })
-        .then(items=>{
-            console.log(items)
-            this.setState({items: items})
-        }).catch(rejected => {
-            console.log(rejected);
-        });
-    }
-    
-    render() {
-        return(
-            <div className='items'>
-                <h1 className='items-head'>Art</h1>
-                    {
-                        this.state.items.map(item =>
-                            <div>
-                                <h3>Name: {item.n}</h3> 
-                                <br/>     Price: {item.p}
+    useEffect(()=>{
+        console.log(items);
+    }, [items])
+
+    return ( 
+        <div className='item-box '>
+            <h1 className='items-head'>Items</h1>
+            {
+                items.map(item =>{
+                    if(item){
+                        return(
+                            <div className='text-3xl'>
+                                <h3 >Name: {item.n}</h3> 
+                                <br/>Price: {item.p}
                             </div>
-                        )
-                    }
-            </div>
-        )
-    }
+                        )  
+                    }else{ return( <div className='font-mono text-center w-screen'> Nothing to display! </div>)}
+                })
+            }
+
+        </div>
+     );
 }
 
 export default Items;
+
