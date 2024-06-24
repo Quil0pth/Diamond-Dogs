@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Items from './components/Items'
 import './App.css'
+import Viewport from './components/Viewport'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,6 +11,7 @@ function App() {
       <div className='main-head text-8xl'>
         _Diamond Dogs' Redemption_
       </div>
+      <Viewport />
       <Items />
     </>
   )

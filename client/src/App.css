@@ -23,3 +23,7 @@
   outline: #9649cb solid 0.1vh;
   padding: 2vh;
 }
+
+.viewport-box{
+  height: 50vh;
+}
